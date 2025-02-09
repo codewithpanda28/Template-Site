@@ -1,0 +1,24 @@
+{
+    "templates": [
+        {
+            "id": 1,
+            "title": "Modern Portfolio Template",
+            "description": "A sleek and responsive portfolio template perfect for creative professionals",
+            "tags": ["Portfolio", "Creative", "Professional"],
+            "category": "portfolio",
+            "images": [
+                "assets/image/1.png",
+                "assets/image/2.png",
+                "assets/image/3.png",
+                "assets/image/4.png"
+            ],
+            "downloadLink": "https://drive.google.com/file/d/1wAkav9jvH-0kZaIx5snj01DY6thGcy5M/view?usp=drive_link",
+            "fileSize": "3.1 MB",
+            "lastUpdated": "2024-02-09",
+            "features": ["Responsive Design", "Clean Code", "Easy Customization"],
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "price": "Free",
+            "previewLink": "https://portfolio8-2-25.netlify.app/"
+        }
+    ]
+}
