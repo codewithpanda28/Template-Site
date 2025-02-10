@@ -6,7 +6,8 @@ async function loadTemplateData() {
     try {
         const response = await fetch('data.json');
         const data = await response.json();
-        return data.templates[0]; // Get the first template for now
+        const templateId = new URLSearchParams(window.location.search).get('id');
+        return data.templates.find(t => t.id.toString() === templateId) || data.templates[0];
     } catch (error) {
         console.error('Error loading template data:', error);
     }
