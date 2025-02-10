@@ -28,10 +28,12 @@ function displayTemplates(templates) {
                 </div>
                 <div class="card-buttons">
                     <a href="preview.html?id=${template.id}" class="preview-button">
-                        <i class="fas fa-eye"></i> Preview
+                        <i class="fas fa-eye"></i>
+                        <span>Preview</span>
                     </a>
                     <a href="download.html?id=${template.id}" class="download-button">
-                        <i class="fas fa-download"></i> Download
+                        <i class="fas fa-download"></i>
+                        <span>Download</span>
                     </a>
                 </div>
             </div>
