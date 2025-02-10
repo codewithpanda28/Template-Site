@@ -2,15 +2,15 @@
     "templates": [
         {
             "id": 1,
-            "title": "Modern Portfolio Template",
-            "description": "A sleek and responsive portfolio template perfect for creative professionals",
+            "title": "🚀 Akash Kumar - Frontend Developer Portfolio",
+            "description": "A creative frontend developer building modern and responsive websites using HTML, CSS, and JavaScript. Check out my work! 💻✨",
             "tags": ["Portfolio", "Creative", "Professional"],
             "category": "portfolio",
             "images": [
-                "assets/image/1.png",
-                "assets/image/2.png",
-                "assets/image/3.png",
-                "assets/image/4.png"
+                "assets/9-2-25/1.png",
+                "assets/9-2-25/2.png",
+                "assets/9-2-25/3.png",
+                "assets/9-2-25/4.png"
             ],
             "downloadLink": "https://drive.google.com/file/d/1wAkav9jvH-0kZaIx5snj01DY6thGcy5M/view?usp=sharing",
             "fileSize": "3.1 MB",
@@ -19,6 +19,27 @@
             "technologies": ["HTML", "CSS", "JavaScript"],
             "price": "Free",
             "previewLink": "https://portfolio8-2-25.netlify.app/"
+        },
+        {
+            "id": 2,
+            "title": "🚀 Creative Developer & Designer | Akash Kumar Portfolio",
+            "description": "I build stunning websites with elegant code and modern design. Check out my projects and let's create something amazing! 🎨💻",
+            "tags": ["Portfolio", "Creative", "Professional"],
+            "category": "portfolio",
+            "images": [
+                "assets/10-2-25/1.png",
+                "assets/10-2-25/2.png",
+                "assets/10-2-25/3.png",
+                "assets/10-2-25/4.png"
+            ],
+            "downloadLink": "https://drive.google.com/file/d/1X1aqAHzADtpqH54-1Yno9F-L_RDtFkz5/view?usp=sharing",
+            "fileSize": "249 KB",
+            "lastUpdated": "2024-02-10",
+            "features": ["Responsive Design", "Clean Code", "Easy Customization"],
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "price": "Free",
+            "previewLink": "https://soft-duckanoo-625e76.netlify.app/"
         }
+
     ]
 }

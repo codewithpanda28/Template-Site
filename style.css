@@ -2612,3 +2612,16 @@ body {
 /* .preview-btn i {
     animation: bounce 2s infinite;
 } */
+
+/* Responsive adjustments for mobile and tablet devices */
+@media (max-width: 768px) {
+    .card-btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: auto;
+    }
+}

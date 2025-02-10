@@ -70,7 +70,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Add event listener to menu toggle
     document.querySelector('.menu-toggle').addEventListener('click', function() {
+        this.classList.toggle('active');
         const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
+        navLinks.classList.toggle('open');
+
+        // Change icon
+        const icon = this.querySelector('i');
+        if (icon.classList.contains('fa-bars')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
     });
 });
