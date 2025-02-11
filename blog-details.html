@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">🐼</div>
+            <span>CWP</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Blog Details Section -->
+    <section class="blog-details">
+        <div class="blog-details-container">
+            <div id="blogContent" class="blog-content animate__animated animate__fadeIn">
+                <!-- Blog content will be loaded dynamically -->
+            </div>
+            <div class="blog-actions">
+                <button onclick="editBlog()" class="action-btn edit-btn">
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+                <button onclick="deleteBlog()" class="action-btn delete-btn">
+                    <i class="fas fa-trash"></i> Delete
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Edit Blog Post</h2>
+            <form id="editForm">
+                <input type="text" id="editTitle" placeholder="Blog Title" required>
+                <div class="image-input-group">
+                    <div class="file-upload-wrapper">
+                        <label for="editImageFile" class="file-upload-label">
+                            <i class="fas fa-upload"></i> Change Image
+                        </label>
+                        <input type="file" id="editImageFile" accept="image/*">
+                    </div>
+                    <div id="editImagePreview" class="image-preview"></div>
+                </div>
+                <textarea id="editContent" placeholder="Write your blog content here..." required></textarea>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="blog.js"></script>
+</body>
+</html>

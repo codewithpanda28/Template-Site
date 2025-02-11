@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blog Posts - Code with Panda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">🐼</div>
+            <span>CWP</span>
+        </div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#templates" class="nav-link">Templates</a>
+            <a href="index.html#blog" class="nav-link">Blog</a>
+            <a href="index.html#videos" class="nav-link">Videos</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- All Blog Posts Section -->
+    <section class="blog-section" id="all-blogs">
+        <div class="section-header" data-aos="fade-up">
+            <h2>All Blog Posts</h2>
+            <p>Explore our complete collection of articles</p>
+        </div>
+        
+        <div class="blog-container" data-aos="fade-up">
+            <div class="blog-grid" id="allBlogsContainer">
+                <!-- Blog posts will be added dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <p>&copy; 2025 Code with Panda. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="blog.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            displayAllBlogs();
+        });
+    </script>
+</body>
+</html>
