@@ -1,6 +1,19 @@
 // Initialize AOS
 AOS.init();
 
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    }
+});
+
 // Fetch and load template data
 async function loadTemplateData() {
     try {
@@ -72,7 +85,19 @@ document.querySelector('.preview-btn').addEventListener('click', async function(
     }
 });
 
-document.querySelector('.menu-toggle').addEventListener('click', function() {
+  // Add event listener to menu toggle
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
     const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
+    navLinks.classList.toggle('open');
+
+    // Change icon
+    const icon = this.querySelector('i');
+    if (icon.classList.contains('fa-bars')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
 });
