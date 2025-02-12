@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="blog.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -16,52 +15,57 @@
             <div class="logo-icon">🐼</div>
             <span>CWP</span>
         </div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <div class="nav-links">
-            <a href="index.html" class="nav-link">Back to Home</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#templates" class="nav-link">Templates</a>
+            <a href="index.html#blog" class="nav-link">Blog</a>
+            <a href="index.html#videos" class="nav-link">Videos</a>
+            <a href="contact.html" class="nav-link">Contact</a>
         </div>
     </nav>
 
     <!-- Blog Details Section -->
-    <section class="blog-details">
-        <div class="blog-details-container">
-            <div id="blogContent" class="blog-content animate__animated animate__fadeIn">
+    <section class="blog-details-section">
+        <div class="container">
+            <div class="blog-details-container" id="blogDetailsContainer">
                 <!-- Blog content will be loaded dynamically -->
             </div>
-            <div class="blog-actions">
-                <button onclick="editBlog()" class="action-btn edit-btn">
-                    <i class="fas fa-edit"></i> Edit
-                </button>
-                <button onclick="deleteBlog()" class="action-btn delete-btn">
-                    <i class="fas fa-trash"></i> Delete
-                </button>
+            
+            <!-- Back to Home -->
+            <div class="back-to-home">
+                <a href="index.html#blog" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Blogs
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Edit Modal -->
-    <div id="editModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Edit Blog Post</h2>
-            <form id="editForm">
-                <input type="text" id="editTitle" placeholder="Blog Title" required>
-                <div class="image-input-group">
-                    <div class="file-upload-wrapper">
-                        <label for="editImageFile" class="file-upload-label">
-                            <i class="fas fa-upload"></i> Change Image
-                        </label>
-                        <input type="file" id="editImageFile" accept="image/*">
-                    </div>
-                    <div id="editImagePreview" class="image-preview"></div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact</a>
                 </div>
-                <textarea id="editContent" placeholder="Write your blog content here..." required></textarea>
-                <button type="submit" class="submit-btn">
-                    <i class="fas fa-save"></i> Save Changes
-                </button>
-            </form>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 Code With Panda. All rights reserved.</p>
         </div>
-    </div>
+    </footer>
 
+    <!-- Scripts -->
+    <script src="script.js"></script>
     <script src="blog.js"></script>
 </body>
 </html>
