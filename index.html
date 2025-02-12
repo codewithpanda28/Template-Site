@@ -103,37 +103,21 @@
 
     <!-- Blog Section -->
     <section class="blog-section" id="blog">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Latest Blog Posts</h2>
-            <p>Explore my thoughts and insights</p>
-        </div>
-        
-        <div class="blog-container" data-aos="fade-up">
-            <div id="blogContainer"></div>
-        </div>
-
-        <!-- Blog Editor Modal -->
-        <div id="blogEditorModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h2>Create New Blog Post</h2>
-                <form id="blogForm">
-                    <input type="text" id="blogTitle" placeholder="Blog Title" required>
-                    <div class="image-input-group">
-                        <div class="file-upload-wrapper">
-                            <label for="imageFile" class="file-upload-label">
-                                <i class="fas fa-upload"></i> Choose Image
-                            </label>
-                            <input type="file" id="imageFile" accept="image/*" required>
-                            <span class="selected-file-name"></span>
-                        </div>
-                        <div id="imagePreview" class="image-preview"></div>
-                    </div>
-                    <textarea id="blogContent" placeholder="Write your blog content here..." required></textarea>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> Publish Blog
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Latest Blog Posts</h2>
+                <p>Explore coding tutorials and web development guides</p>
+            </div>
+            <div class="blog-search" data-aos="fade-up">
+                <div class="search-container">
+                    <input type="text" id="blogSearch" placeholder="Search blog posts...">
+                    <button type="button" id="searchButton">
+                        <i class="fas fa-search"></i>
                     </button>
-                </form>
+                </div>
+            </div>
+            <div id="blogContainer" class="blog-container">
+                <!-- Blog posts will be loaded dynamically -->
             </div>
         </div>
     </section>
