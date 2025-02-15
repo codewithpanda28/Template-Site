@@ -2,6 +2,25 @@
     "templates": [
         {
             "id": 1,
+            "title": "🚀 Modern Portfolio Website – Showcasing Projects & Skills",
+            "description": "A fully responsive portfolio showcasing projects, skills, and experience with dark mode, smooth animations, and a contact form.",
+            "tags": ["Portfolio", "Creative", "Professional"],
+            "category": "portfolio",
+            "images": [
+                "assets/15-2-25/1.png",
+                "assets/15-2-25/2.png",
+                "assets/15-2-25/3.png"
+            ],
+            "downloadLink": "https://link.pocolinks.com/1fpEG2",
+            "fileSize": "2.4 MB",
+            "lastUpdated": "2025-02-15",
+            "features": ["Responsive Design", "Clean Code", "Easy Customization"],
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "price": "Free",
+            "previewLink": "https://cwp-portfolio.netlify.app/"
+        },
+        {
+            "id": 2,
             "title": "🚀 Akash Kumar - Frontend Developer Portfolio",
             "description": "A creative frontend developer building modern and responsive websites using HTML, CSS, and JavaScript. Check out my work! 💻✨",
             "tags": ["Portfolio", "Creative", "Professional"],
@@ -20,26 +39,7 @@
             "price": "Free",
             "previewLink": "https://portfolio8-2-25.netlify.app/"
         },
-        {
-            "id": 2,
-            "title": "🚀 Modern Portfolio Website | Full Animated & Responsive Web Design ✨",
-            "description": "🌟 Welcome to the future of portfolio websites! In this video. ",
-            "tags": ["Portfolio", "Creative", "Professional"],
-            "category": "portfolio",
-            "images": [
-                "assets/11-2-25/1.png",
-                "assets/11-2-25/2.png",
-                "assets/11-2-25/3.png",
-                "assets/11-2-25/4.png"
-            ],
-            "downloadLink": "https://link.pocolinks.com/gdAdM",
-            "fileSize": "1.8 MB",
-            "lastUpdated": "2025-02-11",
-            "features": ["Responsive Design", "Clean Code", "Easy Customization"],
-            "technologies": ["HTML", "CSS", "JavaScript"],
-            "price": "Free",
-            "previewLink": "https://meek-blancmange-a6891d.netlify.app/"
-        },
+
         {
             "id": 3,
             "title": "🚀 Creative Developer & Designer | Akash Kumar Portfolio",
@@ -59,6 +59,26 @@
             "technologies": ["HTML", "CSS", "JavaScript"],
             "price": "Free",
             "previewLink": "https://soft-duckanoo-625e76.netlify.app/"
+        }    ,
+            {
+            "id": 4,
+            "title": "🚀 Modern Portfolio Website | Full Animated & Responsive Web Design ✨",
+            "description": "🌟 Welcome to the future of portfolio websites! In this video. ",
+            "tags": ["Portfolio", "Creative", "Professional"],
+            "category": "portfolio",
+            "images": [
+                "assets/11-2-25/1.png",
+                "assets/11-2-25/2.png",
+                "assets/11-2-25/3.png",
+                "assets/11-2-25/4.png"
+            ],
+            "downloadLink": "https://link.pocolinks.com/gdAdM",
+            "fileSize": "1.8 MB",
+            "lastUpdated": "2025-02-11",
+            "features": ["Responsive Design", "Clean Code", "Easy Customization"],
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "price": "Free",
+            "previewLink": "https://meek-blancmange-a6891d.netlify.app/"
         }
 
     ]
