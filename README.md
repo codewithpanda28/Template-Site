@@ -41,7 +41,7 @@ Modern-Portfolio-Templates/
 
 ## 🖥️ Live Preview  
 Check out the live demo of the project:  
-🔗 **[Modern Portfolio Templates](https://developer-life-work.vercel.app/)**  
+🔗 **[Modern Portfolio Templates](https://codewithpanda.netlify.app/)**  
 
 ---
 
