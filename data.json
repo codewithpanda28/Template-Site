@@ -62,6 +62,26 @@
         }    ,
             {
             "id": 4,
+            "title": "🚀 Professional Portfolio Website - Setup & Customization Guide ✨",
+            "description": "A responsive and customizable portfolio website to showcase skills, projects, and services with smooth animations and theme switching. 🚀 ",
+            "tags": ["Portfolio", "Creative", "Professional"],
+            "category": "portfolio",
+            "images": [
+                "assets/18-2-25/1.png",
+                "assets/18-2-25/2.png",
+                "assets/18-2-25/3.png",
+                "assets/18-2-25/4.png"
+            ],
+            "downloadLink": "https://link.pocolinks.com/nb7KuxwI",
+            "fileSize": "2 MB",
+            "lastUpdated": "2025-02-18",
+            "features": ["Responsive Design", "Clean Code", "Easy Customization"],
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "price": "Free",
+            "previewLink": "https://splendorous-pixie-e7e0ce.netlify.app/"
+        }
+           , {
+            "id": 5,
             "title": "🚀 Modern Portfolio Website | Full Animated & Responsive Web Design ✨",
             "description": "🌟 Welcome to the future of portfolio websites! In this video. ",
             "tags": ["Portfolio", "Creative", "Professional"],
