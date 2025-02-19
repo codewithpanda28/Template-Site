@@ -44,27 +44,64 @@ function displayTemplates(templates) {
 // Filter templates
 function filterTemplates() {
     const filterSelect = document.getElementById('template-filter');
-    const searchInput = document.querySelector('.input-wrapper input');
-    
-    filterSelect.addEventListener('change', updateFilter);
-    searchInput.addEventListener('input', updateFilter);
+    const searchInput = document.getElementById('template-search');
+    const searchBtn = document.querySelector('.search-btn');
     
     function updateFilter() {
         const category = filterSelect.value;
         const searchTerm = searchInput.value.toLowerCase();
         const cards = document.querySelectorAll('.template-card');
+        let hasResults = false;
         
         cards.forEach(card => {
             const cardCategory = card.dataset.category;
             const cardTitle = card.querySelector('h3').textContent.toLowerCase();
             const cardDesc = card.querySelector('p').textContent.toLowerCase();
+            const cardTags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
             
             const matchesCategory = category === 'all' || cardCategory === category;
-            const matchesSearch = cardTitle.includes(searchTerm) || cardDesc.includes(searchTerm);
+            const matchesSearch = searchTerm === '' || 
+                cardTitle.includes(searchTerm) || 
+                cardDesc.includes(searchTerm) ||
+                cardTags.some(tag => tag.includes(searchTerm));
             
-            card.style.display = matchesCategory && matchesSearch ? 'block' : 'none';
+            if (matchesCategory && matchesSearch) {
+                card.style.display = 'block';
+                hasResults = true;
+            } else {
+                card.style.display = 'none';
+            }
         });
+
+        // Show/hide no results message
+        const noResults = document.getElementById('no-results');
+        if (!hasResults) {
+            if (!noResults) {
+                const message = document.createElement('div');
+                message.id = 'no-results';
+                message.className = 'no-results';
+                message.innerHTML = `
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No templates found</h3>
+                        <p>Try different keywords or browse all templates</p>
+                    </div>
+                `;
+                document.getElementById('cards-container').appendChild(message);
+            }
+        } else if (noResults) {
+            noResults.remove();
+        }
     }
+
+    filterSelect.addEventListener('change', updateFilter);
+    searchInput.addEventListener('input', updateFilter);
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            updateFilter();
+        }
+    });
+    searchBtn.addEventListener('click', updateFilter);
 }
 
 // Mobile Menu Toggle
@@ -114,4 +151,62 @@ document.addEventListener('DOMContentLoaded', () => {
                 container.classList.contains('show-all') ? 'Show Less' : 'View More';
         });
     }
+
+    const form = document.querySelector('.project-form');
+    const whatsappBtn = document.getElementById('whatsappBtn');
+
+    // Handle WhatsApp button click
+    whatsappBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('name').value || '';
+        const email = document.getElementById('email').value || '';
+        const phone = document.getElementById('phone').value || '';
+        const budget = document.getElementById('budget').value || '';
+        const projectType = document.getElementById('project-type').value || '';
+        const description = document.getElementById('description').value || '';
+
+        // Create WhatsApp message
+        const message = `*New Project Request*%0A
+--------------------------------%0A
+*Name:* ${name}%0A
+*Email:* ${email}%0A
+*Phone:* ${phone}%0A
+*Budget:* ${budget}%0A
+*Project Type:* ${projectType}%0A
+*Description:* ${description}%0A
+--------------------------------`;
+
+        // Open WhatsApp with your number
+        window.location.href = `https://wa.me/918252472186?text=${message}`;
+    });
+
+    // Handle form submission
+    form.addEventListener('submit', function(e) {
+        // FormSubmit will handle the email sending
+        // You can add additional validation here if needed
+        console.log('Form submitted');
+    });
+
+    const searchInput = document.getElementById('template-search');
+    const clearSearch = document.getElementById('clear-search');
+
+    // Show/hide clear button
+    searchInput.addEventListener('input', function() {
+        if (this.value) {
+            clearSearch.classList.add('visible');
+        } else {
+            clearSearch.classList.remove('visible');
+        }
+    });
+
+    // Clear search
+    clearSearch.addEventListener('click', function() {
+        searchInput.value = '';
+        searchInput.focus();
+        this.classList.remove('visible');
+        // Trigger search update
+        searchInput.dispatchEvent(new Event('input'));
+    });
 });
