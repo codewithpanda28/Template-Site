@@ -2,6 +2,46 @@
     "templates": [
         {
             "id": 1,
+            "title": "🚀 Akash Kumar | Professional Web Developer Portfolio 💻",
+            "description": "A sleek, interactive, and responsive portfolio showcasing skills, projects, and expertise in web development. 🔥",
+            "tags": ["Portfolio", "Creative", "Professional"],
+            "category": "portfolio",
+            "images": [
+                "assets/20-2-25/1.png",
+                "assets/20-2-25/2.png",
+                "assets/20-2-25/3.png",
+                "assets/20-2-25/4.png"
+            ],
+            "downloadLink": "https://link.pocolinks.com/F4kN",
+            "fileSize": "3.9 MB",
+            "lastUpdated": "2025-02-20",
+            "features": ["Responsive Design", "Clean Code", "Easy Customization"],
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "price": "Free",
+            "previewLink": "https://frolicking-nougat-725025.netlify.app/"
+        },
+        {
+            "id": 1,
+            "title": "🚀 Akash Kumar | Full Stack Developer & UI/UX Enthusiast",
+            "description": "Showcasing my projects, skills, and experience as a Full Stack Developer & UI/UX Designer.Let me know if you need more variations! 😊",
+            "tags": ["Portfolio", "Creative", "Professional"],
+            "category": "portfolio",
+            "images": [
+                "assets/19-2-25/1.png",
+                "assets/19-2-25/2.png",
+                "assets/19-2-25/3.png",
+                "assets/19-2-25/4.png"
+            ],
+            "downloadLink": "https://link.pocolinks.com/EEUHOf",
+            "fileSize": "17.5 MB",
+            "lastUpdated": "2025-02-19",
+            "features": ["Responsive Design", "Clean Code", "Easy Customization"],
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "price": "Free",
+            "previewLink": "https://curious-bubblegum-ed4eaa.netlify.app/"
+        },
+        {
+            "id": 1,
             "title": "🚀 Modern Portfolio Website – Showcasing Projects & Skills",
             "description": "A fully responsive portfolio showcasing projects, skills, and experience with dark mode, smooth animations, and a contact form.",
             "tags": ["Portfolio", "Creative", "Professional"],
