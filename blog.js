@@ -9808,11 +9808,7 @@ function displayBlogPosts(posts = blogPosts) {
                     <i class="far fa-calendar-alt"></i> ${post.date}
                 </div>
                 <p class="blog-preview">${post.preview.substring(0, 150)}${post.preview.length > 150 ? '...' : ''}</p>
-                <div class="blog-footer">
-                    <a href="blog-details.html?id=${post.id}" class="read-more">
-                        Read More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+              
             </div>
         </div>
     `).join('');
