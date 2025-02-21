@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Preview - TemplateHub</title>
+    <title>Template Preview - Code with Panda</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -26,84 +25,218 @@
             <div class="bar"></div>
         </div>
         <div class="nav-links">
-            <a href="#" class="nav-link">Home</a>
+            <!-- <a href="#" class="nav-link">Home</a> -->
             <a href="#templates" class="nav-link">Templates</a>
+            <a href="#blog" class="nav-link">Blog</a>
             <a href="#videos" class="nav-link">Videos</a>
-            <a href="#contact" class="nav-link">Contact</a>
-            <button class="support-btn">
-                <i class="fas fa-rocket animate__animated animate__bounce"></i> Get Started
-            </button>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="hire-me.html" class="hire-btn">
+                <i class="fas fa-handshake"></i> Hire Me
+            </a>
         </div>
     </nav>
 
-    <!-- Preview Hero Section -->
-    <section class="preview-hero">
-        <div class="preview-content">
-            <div class="preview-info" data-aos="fade-up">
-                <h1 id="preview-title">Template Title</h1>
-                <p id="preview-description">Template description will appear here</p>
-                <div class="preview-tags" id="preview-tags">
-                    <!-- Tags will be added dynamically -->
-                </div>
-                <button class="preview-btn btnn">
-                    <i class="fas fa-eye"></i>
-                    Preview Template
-                </button>
-            </div>
-            <div class="preview-gallery" data-aos="fade-up" data-aos-delay="200">
-                <div class="preview-main-image">
-                    <img id="preview-main-image" src="" alt="Main Preview">
-                </div>
-                <div class="preview-thumbnails">
-                    <img class="preview-thumb active" src="" alt="Preview 1">
-                     <img class="preview-thumb" src="" alt="Preview 2">
-                    <img class="preview-thumb" src="" alt="Preview 3">
-                    <img class="preview-thumb" src="" alt="Preview 4">
-                </div>
+    <div class="preview-page">
+        <div class="preview-container">
+            <div id="previewContent">
+                <!-- Content will be loaded dynamically -->
             </div>
         </div>
-    </section>
+    </div>
 
-   <!-- Footer -->
-   <footer class="footer" id="contact">
-    <div class="footer-content">
-        <div class="footer-section" data-aos="fade-up">
-            <h3>CWP | CodeWithPanda</h3>
-            <p>Creating beautiful websites made easy with our premium templates.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/panda_creation_29?igsh=MXoydTd4cjF5MnFq" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/codewithpanda28/" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/codewithpanda28?tab=repositories" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://developer-life-work.vercel.app/" class="social-link"><i class="fas fa-briefcase"></i></a>
-                <a href="https://www.youtube.com/@NexCodeUI?themeRefresh=1" class="social-link"><i class="fab fa-youtube"></i></a>
+    <!-- Purchase Popup -->
+    <div id="purchasePopup" class="purchase-popup">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closePurchasePopup()">×</button>
+            <div class="template-preview">
+                <img id="popupTemplateImage" src="" alt="Template Preview">
             </div>
-        </div>
-        <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#templates">Templates</a></li>
-                <li><a href="#videos">Videos</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
-            <h3>CWP - CodeWithPanda</h3>
-            <div class="newsletter-form">
-                <input type="email" placeholder="YouTube - NexCodeUI">
-               
-                
+            <div class="template-details">
+                <h2 id="popupTemplateName"></h2>
+                <div class="price-tag">₹<span id="popupTemplatePrice"></span></div>
+            
+                <div class="contact-buttons">
+                    <a href="https://wa.me/918252472186" class="contact-btn whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://www.instagram.com/panda_creation_29" class="contact-btn instagram" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+                <p class="note">* Contact us on WhatsApp or Instagram to purchase this template</p>
             </div>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 CWP | CodeWithPanda. All rights reserved.</p>
-    </div>
-</footer>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section" data-aos="fade-up">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🐼</div>
+                        <h3>Code with Panda</h3>
+                    </div>
+                    <p>Creating beautiful web experiences with modern technologies and creative designs.</p>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@NexCodeUI?themeRefresh=1" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/panda_creation_29?igsh=MXoydTd4cjF5MnFq" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/codewithpanda28/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/codewithpanda28?tab=repositories" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#templates">Templates</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#videos">Videos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="hire-me.html">Hire Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new templates and features.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <p class="footer-contact">
+                        <i class="fas fa-envelope"></i> codewithpanda28@gmail.com<br>
+                        <i class="fas fa-phone"></i> +91 8252472186
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Code with Panda. All rights reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
-    <script src="preview.js"></script>
+    <script>
+        AOS.init();
+        
+        async function loadTemplatePreview() {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const templateId = urlParams.get('id');
+                
+                const response = await fetch('data.json');
+                const data = await response.json();
+                const template = data.templates.find(t => t.id.toString() === templateId);
+
+                if (template) {
+                    document.title = `${template.title} - Preview`;
+                    const isPremium = template.type === 'paid';
+                    
+                    const previewContent = document.getElementById('previewContent');
+                    previewContent.innerHTML = `
+                        <div class="preview-header" data-aos="fade-up">
+                            <h1>${template.title}</h1>
+                            <p>${template.description}</p>
+                            <div class="preview-actions">
+                                <a href="${template.previewLink}" target="_blank" class="action-btn live-btn">
+                                    <i class="fas fa-eye"></i> Live Demo
+                                </a>
+                                ${isPremium ? `
+                                    <button onclick="showPurchasePopup('${template.title}', '${template.price}', '${template.images[0]}')" class="action-btn buy-btn">
+                                        <i class="fas fa-shopping-cart"></i> Buy Now - ₹${template.price}
+                                    </button>
+                                ` : `
+                                    <a href="${template.downloadLink}" class="action-btn download-btn">
+                                        <i class="fas fa-download"></i> Download Now
+                                    </a>
+                                `}
+                            </div>
+                        </div>
+
+                        <div class="preview-showcase" data-aos="fade-up">
+                            <div class="main-preview">
+                                <img src="${template.images[0]}" alt="Main Preview" id="mainPreview">
+                            </div>
+                            <div class="preview-thumbs">
+                                ${template.images.map((img, index) => `
+                                    <img src="${img}" alt="Preview ${index + 1}" 
+                                        class="thumb ${index === 0 ? 'active' : ''}"
+                                        onclick="changeMainImage('${img}', this)">
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error loading template:', error);
+            }
+        }
+
+        function changeMainImage(src, thumb) {
+            document.getElementById('mainPreview').src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+
+        function showPurchasePopup(templateName, price, imageUrl) {
+            const popup = document.getElementById('purchasePopup');
+            const templateNumber = templateName.split('#')[1]?.split(' ')[0] || '';
+            
+            document.getElementById('popupTemplateName').textContent = templateName;
+            document.getElementById('popupTemplatePrice').textContent = price;
+            document.getElementById('popupTemplateImage').src = imageUrl;
+            
+            // Update WhatsApp link with template details
+            const whatsappLink = document.querySelector('.contact-btn.whatsapp');
+            const message = `Hi, I want to purchase Template ${templateNumber} - ${templateName} (₹${price})`;
+            whatsappLink.href = `https://wa.me/918252472186?text=${encodeURIComponent(message)}`;
+            
+            popup.style.display = 'flex';
+        }
+
+        function closePurchasePopup() {
+            document.getElementById('purchasePopup').style.display = 'none';
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('purchasePopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePurchasePopup();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', loadTemplatePreview);
+    </script>
 </body>
 </html>

@@ -6,6 +6,7 @@
     <title>Hire Me - Code with Panda</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -30,93 +31,80 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <section class="hire-me-section">
-        <div class="hire-me-container">
-            <!-- Pricing Cards -->
-            <div class="pricing-cards">
-                <!-- Basic Package -->
-                <div class="pricing-card" data-aos="fade-up">
-                    <div class="package-name">Basic</div>
-                    <div class="package-price">
-                        <span class="currency">₹</span>
-                        <span class="amount">99</span>
+    <div class="hire-page">
+        <div class="hire-container">
+            <div class="hire-content">
+                <div class="hire-info">
+                    <h1>Let's Work Together</h1>
+                    <p>I'm available for freelance projects and full-time opportunities</p>
+                    
+                    <div class="services-grid">
+                        <div class="service-card" data-aos="fade-up">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Web Development</h3>
+                            <p>Custom websites built with modern technologies</p>
+                        </div>
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Responsive Design</h3>
+                            <p>Mobile-first approach for all devices</p>
+                        </div>
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>UI/UX Design</h3>
+                            <p>Beautiful and intuitive user interfaces</p>
+                        </div>
                     </div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i> 5 Pages Website</li>
-                        <li><i class="fas fa-check"></i> Mobile Responsive</li>
-                        <li><i class="fas fa-check"></i> Contact Form</li>
-                        <li><i class="fas fa-check"></i> Basic SEO</li>
-                        <li><i class="fas fa-check"></i> 2 Revisions</li>
-                        <li><i class="fas fa-check"></i> 5 Days Delivery</li>
-                    </ul>
-                    <a href="https://wa.me/918252472186?text=Hi,%20I'm%20interested%20in%20the%20Basic%20Package%20(₹99)" 
-                       class="package-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Get Started
-                    </a>
+
+                    <div class="contact-options">
+                        <a href="https://wa.me/918252472186" target="_blank" class="contact-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp Me
+                        </a>
+                        <a href="mailto:codewithpanda28@gmail.com" class="contact-btn email">
+                            <i class="fas fa-envelope"></i>
+                            Send Email
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Premium Package -->
-                <div class="pricing-card premium" data-aos="fade-up" data-aos-delay="100">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="package-name">Premium</div>
-                    <div class="package-price">
-                        <span class="currency">₹</span>
-                        <span class="amount">199</span>
-                    </div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i> 10 Pages Website</li>
-                        <li><i class="fas fa-check"></i> Mobile Responsive</li>
-                        <li><i class="fas fa-check"></i> Advanced Forms</li>
-                        <li><i class="fas fa-check"></i> Advanced SEO</li>
-                        <li><i class="fas fa-check"></i> Custom Animations</li>
-                        <li><i class="fas fa-check"></i> 5 Revisions</li>
-                        <li><i class="fas fa-check"></i> 10 Days Delivery</li>
-                    </ul>
-                    <a href="https://wa.me/918252472186?text=Hi,%20I'm%20interested%20in%20the%20Premium%20Package%20(₹199)" 
-                       class="package-btn premium-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Get Started
-                    </a>
-                </div>
-
-                <!-- Custom Package -->
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="package-name">Custom</div>
-                    <div class="package-price">
-                        <span class="currency">₹</span>
-                        <span class="amount">299</span>
-                    </div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i> Unlimited Pages</li>
-                        <li><i class="fas fa-check"></i> Custom Features</li>
-                        <li><i class="fas fa-check"></i> E-commerce Integration</li>
-                        <li><i class="fas fa-check"></i> Premium SEO</li>
-                        <li><i class="fas fa-check"></i> Custom Functionality</li>
-                        <li><i class="fas fa-check"></i> Unlimited Revisions</li>
-                        <li><i class="fas fa-check"></i> Priority Support</li>
-                    </ul>
-                    <a href="https://wa.me/918252472186?text=Hi,%20I'm%20interested%20in%20the%20Custom%20Package%20(₹299)" 
-                       class="package-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Get Started
-                    </a>
-                </div>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="contact-info" data-aos="fade-up">
-                <h2>Need a Custom Solution?</h2>
-                <p>Let's discuss your project requirements</p>
-                <div class="contact-buttons">
-                    <a href="https://wa.me/918252472186" class="contact-btn whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </a>
-                    <a href="mailto:codewithpanda28@gmail.com" class="contact-btn email">
-                        <i class="fas fa-envelope"></i> Send Email
-                    </a>
+                <div class="hire-form-container" data-aos="fade-left">
+                    <form class="hire-form" id="hireForm">
+                        <h2>Start a Project</h2>
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="budget" required>
+                            <label for="budget">Project Budget</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="project-type" required>
+                                <option value="">Select Project Type</option>
+                                <option value="website">Website Development</option>
+                                <option value="webapp">Web Application</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" required></textarea>
+                            <label for="message">Project Details</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

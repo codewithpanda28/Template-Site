@@ -1,11 +1,13 @@
 {
     "templates": [
+     
         {
             "id": 1,
             "title": "🚀 Akash Kumar | Professional Web Developer Portfolio 💻",
             "description": "A sleek, interactive, and responsive portfolio showcasing skills, projects, and expertise in web development. 🔥",
             "tags": ["Portfolio", "Creative", "Professional"],
             "category": "portfolio",
+            "type": "free",
             "images": [
                 "assets/20-2-25/1.png",
                 "assets/20-2-25/2.png",
@@ -26,6 +28,8 @@
             "description": "Showcasing my projects, skills, and experience as a Full Stack Developer & UI/UX Designer.Let me know if you need more variations! 😊",
             "tags": ["Portfolio", "Creative", "Professional"],
             "category": "portfolio",
+            "type": "paid",
+            "price": "49",
             "images": [
                 "assets/19-2-25/1.png",
                 "assets/19-2-25/2.png",
@@ -37,7 +41,6 @@
             "lastUpdated": "2025-02-19",
             "features": ["Responsive Design", "Clean Code", "Easy Customization"],
             "technologies": ["HTML", "CSS", "JavaScript"],
-            "price": "Free",
             "previewLink": "https://curious-bubblegum-ed4eaa.netlify.app/"
         },
         {
@@ -46,6 +49,8 @@
             "description": "A fully responsive portfolio showcasing projects, skills, and experience with dark mode, smooth animations, and a contact form.",
             "tags": ["Portfolio", "Creative", "Professional"],
             "category": "portfolio",
+            "type": "paid",
+            "price": "49",
             "images": [
                 "assets/15-2-25/1.png",
                 "assets/15-2-25/2.png",
@@ -56,7 +61,7 @@
             "lastUpdated": "2025-02-15",
             "features": ["Responsive Design", "Clean Code", "Easy Customization"],
             "technologies": ["HTML", "CSS", "JavaScript"],
-            "price": "Free",
+     
             "previewLink": "https://cwp-portfolio.netlify.app/"
         },
         {
@@ -65,6 +70,7 @@
             "description": "A creative frontend developer building modern and responsive websites using HTML, CSS, and JavaScript. Check out my work! 💻✨",
             "tags": ["Portfolio", "Creative", "Professional"],
             "category": "portfolio",
+            "type": "free",
             "images": [
                 "assets/9-2-25/1.png",
                 "assets/9-2-25/2.png",
@@ -79,13 +85,13 @@
             "price": "Free",
             "previewLink": "https://portfolio8-2-25.netlify.app/"
         },
-
         {
             "id": 5,
             "title": "🚀 Creative Developer & Designer | Akash Kumar Portfolio",
             "description": "I build stunning websites with elegant code and modern design. Check out my projects and let's create something amazing! 🎨💻",
             "tags": ["Portfolio", "Creative", "Professional"],
             "category": "portfolio",
+            "type": "free",
             "images": [
                 "assets/10-2-25/1.png",
                 "assets/10-2-25/2.png",
@@ -99,13 +105,14 @@
             "technologies": ["HTML", "CSS", "JavaScript"],
             "price": "Free",
             "previewLink": "https://soft-duckanoo-625e76.netlify.app/"
-        }    ,
-            {
+        },
+        {
             "id": 6,
             "title": "🚀 Professional Portfolio Website - Setup & Customization Guide ✨",
             "description": "A responsive and customizable portfolio website to showcase skills, projects, and services with smooth animations and theme switching. 🚀 ",
             "tags": ["Portfolio", "Creative", "Professional"],
             "category": "portfolio",
+            "type": "free",
             "images": [
                 "assets/18-2-25/1.png",
                 "assets/18-2-25/2.png",
@@ -119,13 +126,14 @@
             "technologies": ["HTML", "CSS", "JavaScript"],
             "price": "Free",
             "previewLink": "https://splendorous-pixie-e7e0ce.netlify.app/"
-        }
-           , {
+        },
+        {
             "id": 7,
             "title": "🚀 Modern Portfolio Website | Full Animated & Responsive Web Design ✨",
             "description": "🌟 Welcome to the future of portfolio websites! In this video. ",
             "tags": ["Portfolio", "Creative", "Professional"],
             "category": "portfolio",
+            "type": "free",
             "images": [
                 "assets/11-2-25/1.png",
                 "assets/11-2-25/2.png",
@@ -140,6 +148,5 @@
             "price": "Free",
             "previewLink": "https://meek-blancmange-a6891d.netlify.app/"
         }
-
     ]
 }
