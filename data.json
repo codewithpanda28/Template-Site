@@ -87,6 +87,27 @@
         },
         {
             "id": 5,
+            "title": "🚀 Akash Kumar - Frontend Developer Portfolio",
+            "description": "Welcome to my portfolio! I'm Akash Kumar, a passionate frontend developer specializing in React, Next.js, and Tailwind CSS. Explore my projects, skills, and experience in crafting highly responsive, modern, and interactive web applications.😊",
+            "tags": ["Portfolio", "Creative", "Professional"],
+            "category": "portfolio",
+            "type": "paid",
+            "price": "49",
+            "images": [
+                "assets/25-2-25/1.png",
+                "assets/25-2-25/2.png",
+                "assets/25-2-25/3.png",
+                "assets/25-2-25/4.png"
+            ],
+            "downloadLink": "https://link.pocolinks.com/aqPV8Dm",
+            "fileSize": "17.6 MB",
+            "lastUpdated": "2025-02-25",
+            "features": ["Responsive Design", "Clean Code", "Easy Customization"],
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "previewLink": "https://akashkr-portfolio.netlify.app/"
+        },
+        {
+            "id": 6,
             "title": "🚀 Creative Developer & Designer | Akash Kumar Portfolio",
             "description": "I build stunning websites with elegant code and modern design. Check out my projects and let's create something amazing! 🎨💻",
             "tags": ["Portfolio", "Creative", "Professional"],
@@ -106,8 +127,9 @@
             "price": "Free",
             "previewLink": "https://soft-duckanoo-625e76.netlify.app/"
         },
+        
         {
-            "id": 6,
+            "id": 7,
             "title": "🚀 Professional Portfolio Website - Setup & Customization Guide ✨",
             "description": "A responsive and customizable portfolio website to showcase skills, projects, and services with smooth animations and theme switching. 🚀 ",
             "tags": ["Portfolio", "Creative", "Professional"],
@@ -128,7 +150,7 @@
             "previewLink": "https://splendorous-pixie-e7e0ce.netlify.app/"
         },
         {
-            "id": 7,
+            "id": 8,
             "title": "🚀 Modern Portfolio Website | Full Animated & Responsive Web Design ✨",
             "description": "🌟 Welcome to the future of portfolio websites! In this video. ",
             "tags": ["Portfolio", "Creative", "Professional"],
