@@ -3496,3 +3496,32 @@ body {
     margin-top: 1rem;
 }
 
+.telegram{
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    background: #0088cc;
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 136, 204, 0.4);
+        background: #00558b;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+    }
+    a {
+        color: white;
+       
+    }
+    
+}
