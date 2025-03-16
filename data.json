@@ -24,25 +24,27 @@
         },
         {
             "id": 2,
-            "title": "🚀 Akash Kumar | Professional Web Developer Portfolio 💻",
-            "description": "A sleek, interactive, and responsive portfolio showcasing skills, projects, and expertise in web development. 🔥",
-            "tags": ["Portfolio", "Creative", "Professional"],
+            "title": "🚀 Modern Portfolio Website – Built with Next.js & ShadCN",
+            "description": "This portfolio showcases my frontend development skills, featuring an elegant UI, smooth animations, and optimized performance. Built for developers, freelancers, and professionals, the website is fully responsive and SEO-friendly.",
+            "tags": ["Portfolio", " SEO Optimized", "Next.js"],
             "category": "portfolio",
-            "type": "free",
+            "type": "paid",
             "images": [
-                "assets/20-2-25/1.png",
-                "assets/20-2-25/2.png",
-                "assets/20-2-25/3.png",
-                "assets/20-2-25/4.png"
+                "assets/18-3-25/1.png",
+                "assets/18-3-25/2.png",
+                "assets/18-3-25/3.png",
+                "assets/18-3-25/4.png",
+                "assets/18-3-25/5.png"
             ],
             "downloadLink": "https://link.pocolinks.com/F4kN",
-            "fileSize": "3.9 MB",
-            "lastUpdated": "2025-02-20",
+            "fileSize": "10 MB",
+            "lastUpdated": "2025-03-18",
             "features": ["Responsive Design", "Clean Code", "Easy Customization"],
-            "technologies": ["HTML", "CSS", "JavaScript"],
-            "price": "Free",
-            "previewLink": "https://frolicking-nougat-725025.netlify.app/"
+            "technologies": ["Next.js", "ShadCN", "Tailwind CSS"],
+            "price": "149",
+            "previewLink": "https://developer-life-work.vercel.app/"
         },
+     
         {
             "id": 3,
             "title": "🚀 Akash Kumar | Full Stack Developer & UI/UX Enthusiast",
@@ -66,6 +68,27 @@
         },
         {
             "id": 4,
+            "title": "🚀 Akash Kumar | Professional Web Developer Portfolio 💻",
+            "description": "A sleek, interactive, and responsive portfolio showcasing skills, projects, and expertise in web development. 🔥",
+            "tags": ["Portfolio", "Creative", "Professional"],
+            "category": "portfolio",
+            "type": "free",
+            "images": [
+                "assets/20-2-25/1.png",
+                "assets/20-2-25/2.png",
+                "assets/20-2-25/3.png",
+                "assets/20-2-25/4.png"
+            ],
+            "downloadLink": "https://link.pocolinks.com/F4kN",
+            "fileSize": "3.9 MB",
+            "lastUpdated": "2025-02-20",
+            "features": ["Responsive Design", "Clean Code", "Easy Customization"],
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "price": "Free",
+            "previewLink": "https://frolicking-nougat-725025.netlify.app/"
+        },
+        {
+            "id": 5,
             "title": "🚀 Modern Portfolio Website – Showcasing Projects & Skills",
             "description": "A fully responsive portfolio showcasing projects, skills, and experience with dark mode, smooth animations, and a contact form.",
             "tags": ["Portfolio", "Creative", "Professional"],
@@ -86,7 +109,7 @@
             "previewLink": "https://cwp-portfolio.netlify.app/"
         },
         {
-            "id": 5,
+            "id": 6,
             "title": "🚀 Akash Kumar - Frontend Developer Portfolio",
             "description": "A creative frontend developer building modern and responsive websites using HTML, CSS, and JavaScript. Check out my work! 💻✨",
             "tags": ["Portfolio", "Creative", "Professional"],
@@ -107,7 +130,7 @@
             "previewLink": "https://portfolio8-2-25.netlify.app/"
         },
         {
-            "id": 6,
+            "id": 7,
             "title": "🚀 Akash Kumar - Frontend Developer Portfolio",
             "description": "Welcome to my portfolio! I'm Akash Kumar, a passionate frontend developer specializing in React, Next.js, and Tailwind CSS. Explore my projects, skills, and experience in crafting highly responsive, modern, and interactive web applications.😊",
             "tags": ["Portfolio", "Creative", "Professional"],
@@ -128,7 +151,7 @@
             "previewLink": "https://akashkr-portfolio.netlify.app/"
         },
         {
-            "id": 7,
+            "id": 8,
             "title": "🚀 Creative Developer & Designer | Akash Kumar Portfolio",
             "description": "I build stunning websites with elegant code and modern design. Check out my projects and let's create something amazing! 🎨💻",
             "tags": ["Portfolio", "Creative", "Professional"],
@@ -150,7 +173,7 @@
         },
         
         {
-            "id": 8,
+            "id": 9,
             "title": "🚀 Professional Portfolio Website - Setup & Customization Guide ✨",
             "description": "A responsive and customizable portfolio website to showcase skills, projects, and services with smooth animations and theme switching. 🚀 ",
             "tags": ["Portfolio", "Creative", "Professional"],
@@ -171,7 +194,7 @@
             "previewLink": "https://splendorous-pixie-e7e0ce.netlify.app/"
         },
         {
-            "id": 9,
+            "id": 10,
             "title": "🚀 Akash Kumar - Web Developer Portfolio ✨",
             "description": "🌟 Showcasing my expertise in web development with interactive and responsive designs. 🚀 ",
             "tags": ["Portfolio", "Creative", "Professional"],
@@ -192,7 +215,7 @@
             "previewLink": "https://voluble-croquembouche-6a9267.netlify.app/"
         },
         {
-            "id": 10,
+            "id": 11,
             "title": "🚀 Modern Portfolio Website | Full Animated & Responsive Web Design ✨",
             "description": "🌟 Welcome to the future of portfolio websites! In this video. ",
             "tags": ["Portfolio", "Creative", "Professional"],
