@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Proofs | Code with Panda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .proof-section {
+            padding: 100px 20px 60px;
+            background: linear-gradient(135deg, #f6f8fb 0%, #f0f4f8 100%);
+            min-height: calc(100vh - 200px);
+        }
+
+        .proof-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .proof-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .proof-header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #2d3748, #4a5568);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .proof-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .proof-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .client-info {
+            padding: 20px;
+            background: #fff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .client-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 8px;
+        }
+
+        .payment-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f7fafc;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        .payment-info span:first-child {
+            color: #38a169;
+            font-weight: 600;
+        }
+
+        .payment-info span:last-child {
+            color: #4a5568;
+        }
+
+        .proof-content {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .proof-image {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 1px solid #edf2f7;
+            transition: transform 0.3s ease;
+        }
+
+        .proof-image:hover {
+            transform: scale(1.02);
+        }
+
+        .proof-footer {
+            padding: 15px 20px;
+            background: #f8fafc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #edf2f7;
+        }
+
+        .date-badge {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .verified-badge {
+            background: #ebfaf5;
+            color: #059669;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .proof-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .proof-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .proof-header h1 {
+                font-size: 2rem;
+            }
+
+            .proof-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">🐼</div>
+            <span>CWP</span>
+        </div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#templates" class="nav-link">Templates</a>
+            <a href="index.html#blog" class="nav-link">Blog</a>
+            <a href="index.html#videos" class="nav-link">Videos</a>
+            <a href="proof.html" class="nav-link active">Proof</a>
+            <a href="hire-me.html" class="hire-btn">
+                <i class="fas fa-handshake"></i> Hire Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- Proof Section -->
+    <section class="proof-section">
+        <div class="proof-container">
+            <div class="proof-header" data-aos="fade-up">
+                <h1>Payment Proofs</h1>
+                <p>Real testimonials and payment proofs from our satisfied clients</p>
+            </div>
+
+            <div class="proof-grid">
+                <!-- First Proof Card -->
+                <div class="proof-card" data-aos="fade-up">
+                    <div class="client-info">
+                        <div class="client-name">Premanshu</div>
+                        <div class="payment-info">
+                            <span>₹50</span>
+                            <span>Template #5</span>
+                        </div>
+                    </div>
+                    <div class="proof-content">
+                        <img src="proof/15-3-25/Screenshot 2025-03-15 203629.png" alt="Chat Proof" class="proof-image">
+                        <img src="proof/15-3-25/WhatsApp Image 2025-03-15 at 19.43.25_5d2ab781.jpg" alt="Payment Proof" class="proof-image">
+                    </div>
+                    <div class="proof-footer">
+                        <span class="date-badge">
+                            <i class="far fa-calendar-alt"></i> March 15, 2024
+                        </span>
+                        <span class="verified-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </span>
+                    </div>
+                </div>
+              
+
+                <!-- Second Proof Card -->
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section" data-aos="fade-up">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🐼</div>
+                        <h3>Code with Panda</h3>
+                    </div>
+                    <p>Creating beautiful web experiences with modern technologies and creative designs.</p>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@NexCodeUI?themeRefresh=1" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/panda_creation_29?igsh=MXoydTd4cjF5MnFq" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/codewithpanda28/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/codewithpanda28?tab=repositories" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#templates">Templates</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#videos">Videos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="hire-me.html">Hire Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new templates and features.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <p class="footer-contact">
+                        <i class="fas fa-envelope"></i> codewithpanda28@gmail.com<br>
+                        <i class="fas fa-phone"></i> +91 8252472186
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Code with Panda. All rights reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ 
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>

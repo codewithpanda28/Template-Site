@@ -2971,12 +2971,21 @@ body {
     padding: 6rem 2rem;
     background: white;
 }
+.hire-me {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid
+;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
 
 .contact-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     gap: 4rem;
     align-items: center;
 }
