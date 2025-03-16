@@ -52,6 +52,7 @@
         <div class="nav-links">
             <!-- <a href="#" class="nav-link">Home</a> -->
             <a href="#templates" class="nav-link">Templates</a>
+            <a href="#" class="nav-link" id="projectsLink">Projects</a>
             <a href="#blog" class="nav-link">Blog</a>
             <a href="#videos" class="nav-link">Videos</a>
             <a href="proof.html" class="nav-link">Proof</a>
@@ -61,6 +62,24 @@
             </a>
         </div>
     </nav>
+
+    <!-- Add this after your existing popups -->
+<div class="projects-popup" id="projectsPopup">
+    <div class="popup-content">
+        <span class="close-popup" onclick="closeProjectsPopup()">&times;</span>
+        <h2>Choose Project Category</h2>
+        <div class="project-categories">
+            <a href="html-css-projects.html" class="category-btn">
+                <i class="fab fa-html5"></i>
+                HTML, CSS & JS Projects
+            </a>
+            <a href="react-projects.html" class="category-btn">
+                <i class="fab fa-react"></i>
+                React Projects
+            </a>
+        </div>
+    </div>
+</div>
 
     <!-- Templates Section -->
     <section class="templates" id="templates">
@@ -83,7 +102,7 @@
                         <select id="template-filter">
                             <option value="all">Categories</option>
                             <option value="portfolio">Portfolio</option>
-                            <option value="projects">Projects</option>
+                            <!-- <option value="projects">Projects</option> -->
                             <!-- <option value="ecommerce">E-commerce</option>
                             <option value="blog">Blog</option> -->
                         </select>
@@ -103,7 +122,11 @@
           
                 </div>
         </div>
+
+      
+
         <div class="cards-container" id="cards-container">
+         
             <!-- Cards will be added dynamically -->
         </div>
         <!-- <button class="view-more-btn" id="view-more-btn">
@@ -140,6 +163,61 @@
             </div>
         </div>
     </section>
+
+   <!-- Video Section -->
+   <section class="video-section" id="videos">
+    <div class="video-content">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Featured Videos</h2>
+            <p>Watch our latest tutorials and updates</p>
+        </div>
+        <div class="video-grid">
+            <!-- video 1 -->
+            <div class="video-card" data-aos="zoom-in">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4SSQz03tRhU?si=oF-TbfU8b2AMye1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>🚀 My Portfolio Website | How to Extract & Preview the Code Step-by-Step</h3>
+                    <p>In this video, I showcase my Portfolio Website and explain how to extract and open the code. If you want to learn how to build a professional portfolio as a frontend developer, this video will help you get started.</p>
+                </div>
+            </div>
+            <!-- video 2 -->
+            <div class="video-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yJMslK3Q4TQ?si=-8RtvvoHtSLhYqKF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>🚀 My Web Developer Portfolio | Built with HTML, CSS & JavaScript</h3>
+                    <p>Welcome to my Web Developer Portfolio! 🌐✨
+                        I built this modern and responsive portfolio using HTML, CSS, and JavaScript. It showcases my skills, projects, and contact details.</p>
+                </div>
+          </div>
+            <div class="video-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yJMslK3Q4TQ?si=-8RtvvoHtSLhYqKF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>🚀 My Web Developer Portfolio | Built with HTML, CSS & JavaScript</h3>
+                    <p>Welcome to my Web Developer Portfolio! 🌐✨
+                        I built this modern and responsive portfolio using HTML, CSS, and JavaScript. It showcases my skills, projects, and contact details.</p>
+                </div>
+          </div>
+        </div>
+        <div class="youtube-btn-container" data-aos="fade-up" data-aos-delay="400">
+            <a href="https://youtube.com/@codematrixpro?si=uDc5QbhzheOyPycd
+            " target="_blank" class="youtube-btn">
+                <i class="fab fa-youtube"></i>
+                <span>Subscribe to NexCodeUI</span>
+                <div class="btn-background"></div>
+            </a>
+        </div>
+    </div>
+    <div class="video-background">
+        <div class="wave"></div>
+    </div>
+</section>
+
    <!-- Blog Section -->
    <section id="blog" class="blog-section">
     <div class="container">
@@ -164,47 +242,7 @@
 </section>
    
 
-    <!-- Video Section -->
-    <section class="video-section" id="videos">
-        <div class="video-content">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Featured Videos</h2>
-                <p>Watch our latest tutorials and updates</p>
-            </div>
-            <div class="video-grid">
-                <div class="video-card" data-aos="zoom-in">
-                    <div class="video-wrapper">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4SSQz03tRhU?si=oF-TbfU8b2AMye1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>🚀 My Portfolio Website | How to Extract & Preview the Code Step-by-Step</h3>
-                        <p>In this video, I showcase my Portfolio Website and explain how to extract and open the code. If you want to learn how to build a professional portfolio as a frontend developer, this video will help you get started.</p>
-                    </div>
-                </div>
-                <div class="video-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="video-wrapper">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yJMslK3Q4TQ?si=-8RtvvoHtSLhYqKF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>🚀 My Web Developer Portfolio | Built with HTML, CSS & JavaScript</h3>
-                        <p>Welcome to my Web Developer Portfolio! 🌐✨
-                            I built this modern and responsive portfolio using HTML, CSS, and JavaScript. It showcases my skills, projects, and contact details.</p>
-                    </div>
-              </div>
-            </div>
-            <div class="youtube-btn-container" data-aos="fade-up" data-aos-delay="400">
-                <a href="https://youtube.com/@codematrixpro?si=uDc5QbhzheOyPycd
-                " target="_blank" class="youtube-btn">
-                    <i class="fab fa-youtube"></i>
-                    <span>Subscribe to NexCodeUI</span>
-                    <div class="btn-background"></div>
-                </a>
-            </div>
-        </div>
-        <div class="video-background">
-            <div class="wave"></div>
-        </div>
-    </section>
+ 
 
     <!-- Contact Section -->
     <section class="contact-section" id="contact">

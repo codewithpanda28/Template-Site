@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML, CSS & JS Projects - Code with Panda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+   .search-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin: 6rem auto;
+    max-width: 1200px;
+}
+.telegram{
+        color: white;
+     }
+
+        
+        
+    </style>
+    <!-- Copy your navbar here from index.html -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">🐼</div>
+            <span>CWP</span>
+        </div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link" id="projectsLink">Projects</a>
+            <a href="index.html#blog" class="nav-link">Blog</a>
+            <a href="index.html#videos" class="nav-link">Videos</a>
+            <a href="proof.html" class="nav-link">Proof</a>
+            <a href="hire-me.html" class="hire-btn">
+                <i class="fas fa-handshake"></i> Hire Me
+            </a>
+        </div>
+    </nav>
+
+        <!-- Add after navbar -->
+    <div class="projects-popup" id="projectsPopup">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closeProjectsPopup()">&times;</span>
+            <h2>Choose Project Category</h2>
+            <div class="project-categories">
+                <a href="html-css-projects.html" class="category-btn">
+                    <i class="fab fa-html5"></i>
+                    HTML, CSS & JS Projects
+                </a>
+                <a href="react-projects.html" class="category-btn">
+                    <i class="fab fa-react"></i>
+                    React Projects
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section class="projects-section">
+        <div class="section-header" data-aos="fade-up">
+             <div class="search-section">
+             
+                <!-- add telegram link with style add -->
+                 <a class="search-container telegram" href="https://t.me/backup28_channel" target="_blank" class="nav-link">Telegram</a>
+          
+                </div>
+        </div>
+
+        <div class="cards-container" id="projectsGrid">
+            <!-- Projects will be loaded dynamically -->
+        </div>
+
+        <!-- Purchase Popup -->
+        <div class="purchase-popup" id="purchasePopup">
+            <div class="popup-content">
+                <span class="close-popup" onclick="closePurchasePopup()">&times;</span>
+                <div class="project-details">
+                    <div class="project-preview">
+                        <img id="popupProjectImage" src="" alt="Project Preview">
+                    </div>
+                    <h2 id="popupProjectName"></h2>
+                    <div class="price-tag">
+                        <span>₹</span>
+                        <span id="popupProjectPrice"></span>
+                    </div>
+                    <p class="popup-description">To purchase this project, contact us through:</p>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/918252472186" target="_blank" class="contact-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://www.instagram.com/panda_creation_29" target="_blank" class="contact-btn instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                    <p class="note">* Project files will be shared after payment confirmation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copy your footer here from index.html -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Project data
+        const htmlCssProjects = [
+            {
+                id: 1,
+                title: "Modern Portfolio Website",
+                description: "Responsive portfolio website with dark mode, smooth animations, and contact form.",
+                image: "images/projects/portfolio.jpg",
+                category: "portfolio",
+                type: "free",
+                previewLink: "https://your-preview-link.com/portfolio",
+                downloadLink: "https://your-download-link.com/portfolio"
+            },
+            {
+                id: 2,
+                title: "E-commerce Dashboard",
+                description: "Advanced admin dashboard with charts, analytics, and user management.",
+                image: "images/projects/dashboard.jpg",
+                category: "dashboard",
+                type: "premium",
+                price: 499,
+                previewLink: "https://your-preview-link.com/dashboard"
+            }
+            // Add more projects here
+        ];
+
+        function loadProjects() {
+            const projectsGrid = document.getElementById('projectsGrid');
+            projectsGrid.innerHTML = htmlCssProjects.map(project => `
+                <div class="card" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="${project.image}" alt="${project.title}">
+                        ${project.type === 'premium' ? '<span class="premium-badge">Premium</span>' : ''}
+                    </div>
+                    <div class="card-content">
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                        <div class="card-buttons">
+                            <a href="${project.previewLink}" target="_blank" class="preview-btn">
+                                <i class="fas fa-eye"></i> Preview
+                            </a>
+                            ${project.type === 'free' 
+                                ? `<a href="${project.downloadLink}" class="download-btn">
+                                    <i class="fas fa-download"></i> Download
+                                   </a>`
+                                : `<button onclick="showPurchasePopup('${project.title}', ${project.price}, '${project.image}')" class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i> Buy Now
+                                   </button>`
+                            }
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Popup functions
+        function showPurchasePopup(title, price, image) {
+            const popup = document.getElementById('purchasePopup');
+            document.getElementById('popupProjectName').textContent = title;
+            document.getElementById('popupProjectPrice').textContent = price;
+            document.getElementById('popupProjectImage').src = image;
+            popup.style.display = 'flex';
+        }
+
+        function closePurchasePopup() {
+            document.getElementById('purchasePopup').style.display = 'none';
+        }
+
+        // Initialize
+        AOS.init();
+        document.addEventListener('DOMContentLoaded', loadProjects);
+
+           
+        // Add these functions for the projects popup
+        function showProjectsPopup() {
+            const popup = document.getElementById('projectsPopup');
+            popup.style.display = 'flex';
+        }
+
+        function closeProjectsPopup() {
+            const popup = document.getElementById('projectsPopup');
+            popup.style.display = 'none';
+        }
+
+        // Add event listener for projects link
+        document.getElementById('projectsLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            showProjectsPopup();
+        });
+
+        // Close popup when clicking outside
+        window.addEventListener('click', function(e) {
+            const popup = document.getElementById('projectsPopup');
+            if (e.target === popup) {
+                closeProjectsPopup();
+            }
+        });
+
+        // ... rest of your existing script ...
+
+    </script>
+</body>
+</html>

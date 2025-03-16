@@ -327,3 +327,27 @@ async function loadTemplatePreview() {
         console.error('Error loading template:', error);
     }
 }
+
+
+// Projects Popup Functions
+function showProjectsPopup() {
+    document.getElementById('projectsPopup').style.display = 'flex';
+}
+
+function closeProjectsPopup() {
+    document.getElementById('projectsPopup').style.display = 'none';
+}
+
+// Add event listener for projects link
+document.getElementById('projectsLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    showProjectsPopup();
+});
+
+// Close popup when clicking outside
+window.addEventListener('click', function(e) {
+    const popup = document.getElementById('projectsPopup');
+    if (e.target === popup) {
+        closeProjectsPopup();
+    }
+});
