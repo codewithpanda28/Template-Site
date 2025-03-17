@@ -320,6 +320,8 @@ body {
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .preview-button, .download-button {
@@ -2486,8 +2488,8 @@ body {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .search-section {
-        position: sticky;
-        top: 70px;
+        position: relative;
+        top: -10px;
         z-index: 90;
         margin: 0;
         padding: 1rem;
@@ -3604,4 +3606,101 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+/* ... existing styles ... */
+
+.video-card h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.video-card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+    line-height: 1.5;
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.social-buttons::-webkit-scrollbar {
+    display: none;
+}
+
+.social-btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+    min-width: fit-content;
+}
+
+@media (max-width: 768px) {
+    .social-btn {
+        /* padding: 12px;
+        aspect-ratio: 1;
+        border-radius: 50%; */
+    }
+    
+    .social-btn span {
+        display: none;
+    }
+    
+    .social-btn i {
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    .social-buttons {
+        justify-content: space-between;
+        padding: 10px;
+    }
+}
+
+/* Keep your existing social button color styles */
+.telegram-btn { background: #0088cc; }
+.telegram-btn:hover { background: #006699; }
+.instagram-btn { background: #E4405F; }
+.instagram-btn:hover { background: #D93147; }
+.youtube-btn { background: #FF0000; }
+.youtube-btn:hover { background: #CC0000; }
+.whatsapp-btn { background: #25D366; }
+.whatsapp-btn:hover { background: #128C7E; }
+.email-btn { background: #EA4335; }
+.email-btn:hover { background: #B92D21; }
+.linkedin-btn { background: #0077B5; }
+.linkedin-btn:hover { background: #005582; }
+
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
 }

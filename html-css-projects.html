@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,305 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
     <style>
-   .search-section {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    margin: 6rem auto;
-    max-width: 1200px;
-}
-.telegram{
-        color: white;
-     }
+        .search-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 6rem auto;
+            max-width: 1200px;
+        }
 
+        .telegram {
+            color: white;
+        }
+
+
+
+        .preview-btn,
+        .download-btn,
+        .buy-btn {
+            padding: 10px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .preview-btn {
+            background: linear-gradient(135deg, rgb(74, 144, 226), rgb(53, 122, 189));
+            color: #ffffff;
+        }
+
+        .preview-btn:hover {
+      
+            transform: translateY(-2px);
+        }
+
+        .download-btn {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .download-btn:hover {
+          
+            transform: translateY(-2px);
+        }
+
+        .buy-btn {
+            background: linear-gradient(135deg, rgb(255, 77, 77), rgb(255, 0, 0));
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
         
-        
+            transform: translateY(-2px);
+        }
+
+        .price-display {
+            margin: 10px 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #007bff;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .currency {
+            font-size: 0.8em;
+        }
+
+        .amount {
+            color: #333;
+        }
+
+
+        /* Popup Styles */
+        .projects-popup,
+        .purchase-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            position: relative;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .close-popup {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .close-popup:hover {
+            color: #333;
+        }
+
+        /* Project Categories Popup */
+        .project-categories {
+            display: grid;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .category-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .category-btn:hover {
+            background: #2483e2;
+            transform: translateY(-2px);
+        }
+
+        .category-btn i {
+            font-size: 24px;
+        }
+
+        /* Purchase Popup Specific */
+        .project-preview {
+            margin: -30px -30px 20px;
+        }
+
+        .project-preview img {
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+            max-height: 250px;
+            object-fit: cover;
+        }
+
+        .price-tag {
+            font-size: 24px;
+            color: #007bff;
+            margin: 15px 0;
+            font-weight: bold;
+            justify-content: center;
+        }
+
+        .contact-buttons {
+            display: grid;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp {
+            background: #25D366;
+        }
+
+        .whatsapp:hover {
+            background: #128C7E;
+        }
+
+        .instagram {
+            background: #E4405F;
+        }
+
+        .instagram:hover {
+            background: #D93147;
+        }
+
+        .note {
+            margin-top: 15px;
+            color: #666;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+
+    .card-number {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: rgba(99, 102, 241, 0.9);
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 0.9em;
+        z-index: 1;
+    }
+    @media (max-width: 768px) {
+    .card-buttons {
+        flex-direction: row;
+    }
+}
+
+.purchase-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+            width: 100%;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-links.active {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu-toggle.active .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+    }
+
+
+
+
+
+        < !-- Replace the existing telegram link with this --><div class="search-section"><div class="social-buttons"><a class="social-btn telegram-btn" href="https://t.me/backup28_channel" target="_blank"><i class="fab fa-telegram"></i>Telegram </a><a class="social-btn instagram-btn" href="https://www.instagram.com/panda_creation_29" target="_blank"><i class="fab fa-instagram"></i>Instagram </a></div></div>
     </style>
     <!-- Copy your navbar here from index.html -->
     <nav class="navbar">
@@ -38,6 +322,7 @@
         </div>
         <div class="nav-links">
             <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#template" class="nav-link">Templates</a>
             <a href="#" class="nav-link" id="projectsLink">Projects</a>
             <a href="index.html#blog" class="nav-link">Blog</a>
             <a href="index.html#videos" class="nav-link">Videos</a>
@@ -48,7 +333,7 @@
         </div>
     </nav>
 
-        <!-- Add after navbar -->
+    <!-- Add after navbar -->
     <div class="projects-popup" id="projectsPopup">
         <div class="popup-content">
             <span class="close-popup" onclick="closeProjectsPopup()">&times;</span>
@@ -67,13 +352,16 @@
     </div>
 
     <section class="projects-section">
-        <div class="section-header" data-aos="fade-up">
-             <div class="search-section">
-             
-                <!-- add telegram link with style add -->
-                 <a class="search-container telegram" href="https://t.me/backup28_channel" target="_blank" class="nav-link">Telegram</a>
-          
-                </div>
+
+        <div class="search-section">
+            <div class="social-buttons">
+                <a class="social-btn telegram-btn" href="https://t.me/backup28_channel" target="_blank">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+                <a class="social-btn instagram-btn" href="https://www.instagram.com/panda_creation_29" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
         </div>
 
         <div class="cards-container" id="projectsGrid">
@@ -98,7 +386,8 @@
                         <a href="https://wa.me/918252472186" target="_blank" class="contact-btn whatsapp">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
-                        <a href="https://www.instagram.com/panda_creation_29" target="_blank" class="contact-btn instagram">
+                        <a href="https://www.instagram.com/panda_creation_29" target="_blank"
+                            class="contact-btn instagram">
                             <i class="fab fa-instagram"></i> Instagram
                         </a>
                     </div>
@@ -115,64 +404,103 @@
         const htmlCssProjects = [
             {
                 id: 1,
-                title: "Modern Portfolio Website",
-                description: "Responsive portfolio website with dark mode, smooth animations, and contact form.",
-                image: "images/projects/portfolio.jpg",
+                title: "Simple Web Calculator",
+                description: "A basic calculator for quick and easy arithmetic operations, built with HTML, CSS, and JavaScript.",
+                image: "HtmlImage/1.png",
                 category: "portfolio",
                 type: "free",
-                previewLink: "https://your-preview-link.com/portfolio",
-                downloadLink: "https://your-download-link.com/portfolio"
+                previewLink: "https://famous-puffpuff-43a90c.netlify.app/",
+                downloadLink: "https://link.pocolinks.com/6o3Wj"
             },
             {
                 id: 2,
+                title: "Analog Clock",
+                description: "A sleek and modern analog clock with real-time updates, built using HTML, CSS, and JavaScript.",
+                image: "HtmlImage/2.png",
+                category: "portfolio",
+                type: "free",
+                previewLink: "https://resplendent-stroopwafel-189efe.netlify.app/",
+                downloadLink: "https://link.pocolinks.com/ZxJ2"
+            },
+            /* {
+                id: 2,
                 title: "E-commerce Dashboard",
                 description: "Advanced admin dashboard with charts, analytics, and user management.",
-                image: "images/projects/dashboard.jpg",
+                image: "HtmlImage/1.png",
                 category: "dashboard",
                 type: "premium",
-                price: 499,
+                price: 99,
                 previewLink: "https://your-preview-link.com/dashboard"
-            }
+            } */
             // Add more projects here
         ];
-
-        function loadProjects() {
-            const projectsGrid = document.getElementById('projectsGrid');
-            projectsGrid.innerHTML = htmlCssProjects.map(project => `
-                <div class="card" data-aos="fade-up">
-                    <div class="card-image">
-                        <img src="${project.image}" alt="${project.title}">
-                        ${project.type === 'premium' ? '<span class="premium-badge">Premium</span>' : ''}
+    function loadProjects() {
+    const projectsGrid = document.getElementById('projectsGrid');
+    projectsGrid.innerHTML = htmlCssProjects.map((project, index) => `
+        <div class="card" data-aos="fade-up">
+            <div class="card-image">
+                <div class="card-number">${index + 1}</div>
+                <img src="${project.image}" alt="${project.title}">
+                ${project.type === 'premium' ? '<span class="premium-badge">Premium</span>' : ''}
+            </div>
+            <div class="card-content">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                ${project.type === 'premium' ? `
+                    <div class="price-display">
+                        <span class="currency">₹</span>
+                        <span class="amount">${project.price}</span>
                     </div>
-                    <div class="card-content">
-                        <h3>${project.title}</h3>
-                        <p>${project.description}</p>
-                        <div class="card-buttons">
-                            <a href="${project.previewLink}" target="_blank" class="preview-btn">
-                                <i class="fas fa-eye"></i> Preview
-                            </a>
-                            ${project.type === 'free' 
-                                ? `<a href="${project.downloadLink}" class="download-btn">
-                                    <i class="fas fa-download"></i> Download
-                                   </a>`
-                                : `<button onclick="showPurchasePopup('${project.title}', ${project.price}, '${project.image}')" class="buy-btn">
-                                    <i class="fas fa-shopping-cart"></i> Buy Now
-                                   </button>`
-                            }
-                        </div>
-                    </div>
+                ` : ''}
+                <div class="card-buttons">
+                    <a href="${project.previewLink}" target="_blank" class="preview-btn">
+                        <i class="fas fa-eye"></i> Preview
+                    </a>
+                    ${project.type === 'free' 
+                        ? `<a href="${project.downloadLink}" class="download-btn">
+                            <i class="fas fa-download"></i> Download
+                           </a>`
+                        : `<button onclick="showPurchasePopup(\`${project.title}\`, ${project.price}, \`${project.image}\`)" class="buy-btn">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                           </button>`
+                    }
                 </div>
-            `).join('');
-        }
-
+            </div>
+        </div>
+    `).join('');
+}
+        
         // Popup functions
-        function showPurchasePopup(title, price, image) {
-            const popup = document.getElementById('purchasePopup');
-            document.getElementById('popupProjectName').textContent = title;
-            document.getElementById('popupProjectPrice').textContent = price;
-            document.getElementById('popupProjectImage').src = image;
-            popup.style.display = 'flex';
-        }
+    function showPurchasePopup(title, price, image) {
+    const popup = document.getElementById('purchasePopup');
+    const projectName = document.getElementById('popupProjectName');
+    const projectPrice = document.getElementById('popupProjectPrice');
+    const projectImage = document.getElementById('popupProjectImage');
+    
+    // Find the project number
+    const projectNumber = htmlCssProjects.findIndex(p => p.title === title) + 1;
+
+    projectName.textContent = title;
+    projectPrice.textContent = price;
+    projectImage.src = image;
+
+    // Create message with project details including card number
+    const message = `Hi, I'm interested in purchasing the project:\n\nProject #${projectNumber}: ${title}\nPrice: ₹${price}\nContact: +91 8252472186`;
+    const encodedMessage = encodeURIComponent(message);
+
+    // Update WhatsApp and Instagram links
+    const whatsappLink = document.querySelector('.whatsapp');
+    const instagramLink = document.querySelector('.instagram');
+
+    whatsappLink.href = `https://wa.me/918252472186?text=${encodedMessage}`;
+    instagramLink.href = `https://www.instagram.com/direct/t/panda_creation_29?text=${encodedMessage}`;
+
+    // Update button text to show contact info
+    whatsappLink.innerHTML = `<i class="fab fa-whatsapp"></i> WhatsApp`;
+    instagramLink.innerHTML = `<i class="fab fa-instagram"></i> Instagram `;
+
+    popup.style.display = 'flex';
+}
 
         function closePurchasePopup() {
             document.getElementById('purchasePopup').style.display = 'none';
@@ -182,7 +510,7 @@
         AOS.init();
         document.addEventListener('DOMContentLoaded', loadProjects);
 
-           
+
         // Add these functions for the projects popup
         function showProjectsPopup() {
             const popup = document.getElementById('projectsPopup');
@@ -195,21 +523,66 @@
         }
 
         // Add event listener for projects link
-        document.getElementById('projectsLink').addEventListener('click', function(e) {
+        document.getElementById('projectsLink').addEventListener('click', function (e) {
             e.preventDefault();
             showProjectsPopup();
         });
 
         // Close popup when clicking outside
-        window.addEventListener('click', function(e) {
+        window.addEventListener('click', function (e) {
             const popup = document.getElementById('projectsPopup');
             if (e.target === popup) {
                 closeProjectsPopup();
             }
         });
 
+        // Add this event listener for purchase popup
+window.addEventListener('click', function(e) {
+    const purchasePopup = document.getElementById('purchasePopup');
+    const projectsPopup = document.getElementById('projectsPopup');
+    
+    if (e.target === purchasePopup) {
+        closePurchasePopup();
+    } else if (e.target === projectsPopup) {
+        closeProjectsPopup();
+    }
+});
+
+// Update the showPurchasePopup function
+function showPurchasePopup(title, price, image) {
+    const popup = document.getElementById('purchasePopup');
+    const projectName = document.getElementById('popupProjectName');
+    const projectPrice = document.getElementById('popupProjectPrice');
+    const projectImage = document.getElementById('popupProjectImage');
+
+    projectName.textContent = title;
+    projectPrice.textContent = price;
+    projectImage.src = image;
+
+    // Create message with project details
+    const message = `Hi, I'm interested in purchasing the project:\n\nProject: ${title}\nPrice: ₹${price}`;
+    const encodedMessage = encodeURIComponent(message);
+
+    // Update WhatsApp and Instagram links
+    const whatsappLink = document.querySelector('.whatsapp');
+    const instagramLink = document.querySelector('.instagram');
+
+    whatsappLink.href = `https://wa.me/918252472186?text=${encodedMessage}`;
+    instagramLink.href = `https://www.instagram.com/direct/t/panda_creation_29?text=${encodedMessage}`;
+
+    popup.style.display = 'flex';
+}
+
         // ... rest of your existing script ...
 
+        // Add this code in your script section
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+    this.classList.toggle('active');
+});
     </script>
+
+    <script src=""></script>
 </body>
+
 </html>
