@@ -29,7 +29,35 @@
             justify-items: space;
         }
 
+/* Update the card-buttons style */
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
+.preview-btn,
+.download-btn,
+.buy-btn,
+.github-source-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 8px 15px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.github-source-btn {
+    background: #333;
+    text-decoration: none;
+    color: white;
+}
+
+.github-source-btn:hover {
+    background: #24292e;
+    transform: translateY(-2px);
+}
         .card-number {
             position: absolute;
             top: 10px;
@@ -509,15 +537,16 @@
     <script>
         // Project data
         const reactProjects = [
-        {
+            {
                 id: 1,
-                title: "Simple Web Calculator",
-                description: "A basic calculator for quick and easy arithmetic operations, built with HTML, CSS, and JavaScript.",
-                image: "HtmlImage/1.png",
-                category: "portfolio",
+                title: "Neumorphic Calculator",
+                description: "A sleek and interactive calculator built with Next.js, React, and Tailwind CSS, featuring a modern neumorphic design and keyboard support. 🚀",
+                image: "ReactImage/1/1.png",
+                category: "projects",
                 type: "free",
-                previewLink: "https://famous-puffpuff-43a90c.netlify.app/",
-                downloadLink: "https://link.pocolinks.com/6o3Wj"
+                previewLink: "https://calculator-1st.vercel.app/",
+                githubLink: "https://github.com/Akash-ai1801/Calculator-1st",
+                downloadLink: "https://link.pocolinks.com/kniH8N"
             },
             /* {
                 id: 1,
@@ -552,18 +581,21 @@
                     </div>
                 ` : ''}
                 <div class="card-buttons">
-                    <a href="${project.previewLink}" target="_blank" class="preview-btn">
-                        <i class="fas fa-eye"></i> Preview
-                    </a>
-                    ${project.type === 'free'
-                    ? `<a href="${project.downloadLink}" class="download-btn">
-                            <i class="fas fa-download"></i> Download
-                           </a>`
-                    : `<button onclick="showPurchasePopup('${project.title}', ${project.price}, '${project.image}')" class="buy-btn">
-                            <i class="fas fa-shopping-cart"></i> Buy Now
-                           </button>`
-                }
-                </div>
+    <a href="${project.previewLink}" target="_blank" class="preview-btn">
+        <i class="fas fa-eye"></i> Preview
+    </a>
+    <a href="${project.githubLink}" target="_blank" class="github-source-btn">
+        <i class="fab fa-github"></i> Source
+    </a>
+    ${project.type === 'free'
+        ? `<a href="${project.downloadLink}" class="download-btn">
+            <i class="fas fa-download"></i> Download
+           </a>`
+        : `<button onclick="showPurchasePopup('${project.title}', ${project.price}, '${project.image}')" class="buy-btn">
+            <i class="fas fa-shopping-cart"></i> Buy Now
+           </button>`
+    }
+</div>
             </div>
         </div>
     `).join('');
