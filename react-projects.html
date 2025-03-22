@@ -568,7 +568,7 @@
         <div class="card" data-aos="fade-up">
             <div class="card-image">
                 <div class="card-number">${index + 1}</div>
-                <img src="${project.image}" alt="${project.title}">
+                <img src="${project.image}" loading="lazy" alt="${project.title}">
                 ${project.type === 'premium' ? '<span class="premium-badge">Premium</span>' : ''}
             </div>
             <div class="card-content">

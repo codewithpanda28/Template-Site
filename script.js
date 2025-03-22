@@ -43,7 +43,7 @@ function displayTemplates(templates) {
                 <div class="template-card paid" data-aos="fade-up" data-category="${template.category}" data-type="${type}">
                     <div class="template-number">${index + 1}</div>
                     <div class="template-image">
-                        <img src="${mainImage}" alt="${template.title}" onerror="this.src='images/placeholder.jpg'">
+                        <img src="${mainImage}" loading="lazy" alt="${template.title}" onerror="this.src='images/placeholder.jpg'">
                         <div class="premium-badge">
                             <i class="fas fa-crown"></i> Premium
                         </div>
@@ -72,7 +72,7 @@ function displayTemplates(templates) {
                 <div class="template-card" data-aos="fade-up" data-category="${template.category}" data-type="${type}">
                     <div class="template-number">${index + 1}</div>
                     <div class="template-image">
-                        <img src="${mainImage}" alt="${template.title}" onerror="this.src='images/placeholder.jpg'">
+                        <img src="${mainImage}" alt="${template.title}" loading="lazy" onerror="this.src='images/placeholder.jpg'">
                     </div>
                     <div class="template-info">
                         <h3>${template.title}</h3>

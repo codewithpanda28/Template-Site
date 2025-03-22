@@ -374,7 +374,7 @@
                 <span class="close-popup" onclick="closePurchasePopup()">&times;</span>
                 <div class="project-details">
                     <div class="project-preview">
-                        <img id="popupProjectImage" src="" alt="Project Preview">
+                        <img id="popupProjectImage" loading="lazy" src="" alt="Project Preview">
                     </div>
                     <h2 id="popupProjectName"></h2>
                     <div class="price-tag">
@@ -527,7 +527,7 @@
         <div class="card" data-aos="fade-up">
             <div class="card-image">
                 <div class="card-number">${index + 1}</div>
-                <img src="${project.image}" alt="${project.title}">
+                <img src="${project.image}" loading="lazy" alt="${project.title}">
                 ${project.type === 'premium' ? '<span class="premium-badge">Premium</span>' : ''}
             </div>
             <div class="card-content">

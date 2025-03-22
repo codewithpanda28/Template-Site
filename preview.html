@@ -52,7 +52,7 @@
         <div class="popup-content">
             <button class="close-popup" onclick="closePurchasePopup()">×</button>
             <div class="template-preview">
-                <img id="popupTemplateImage" src="" alt="Template Preview">
+                <img id="popupTemplateImage" loading="lazy" src="" alt="Template Preview">
             </div>
             <div class="template-details">
                 <h2 id="popupTemplateName"></h2>
@@ -189,11 +189,11 @@
 
                         <div class="preview-showcase" data-aos="fade-up">
                             <div class="main-preview">
-                                <img src="${template.images[0]}" alt="Main Preview" id="mainPreview">
+                                <img src="${template.images[0]}" loading="lazy" alt="Main Preview" id="mainPreview">
                             </div>
                             <div class="preview-thumbs">
                                 ${template.images.map((img, index) => `
-                                    <img src="${img}" alt="Preview ${index + 1}" 
+                                    <img src="${img}" loading="lazy" alt="Preview ${index + 1}" 
                                         class="thumb ${index === 0 ? 'active' : ''}"
                                         onclick="changeMainImage('${img}', this)">
                                 `).join('')}
